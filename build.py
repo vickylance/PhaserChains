@@ -18,7 +18,7 @@ COPY_FILES = [
 ]
 
 
-distdir = 'build'
+distdir = 'docs'
 
 shutil.rmtree(distdir, True)
 
