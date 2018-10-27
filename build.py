@@ -8,13 +8,13 @@ import datetime
 import sys
 
 COPY_FOLDERS = [
-	'lib',
-	'js', 
-	'assets',
-	]
-	
+    'lib',
+    'js',
+    'assets',
+]
+
 COPY_FILES = [
-	'index.html',
+    'index.html',
 ]
 
 
@@ -50,10 +50,9 @@ for dirpath, dirnames, filenames in os.walk('.'):
         if fname.startswith('.'):
             continue
         # the rest of the files, add them to the cache
-        text += os.path.join(dirpath[1:], fname) + '\n'            
+        text += os.path.join(dirpath[1:], fname) + '\n'
 
 
-        
 text += '''
 NETWORK:
 *
@@ -62,16 +61,8 @@ NETWORK:
 
 f = open('phaserchains.appcache', 'w')
 f.write(text)
-f.close();
+f.close()
 
 os.chdir(curdir)
 
 print('\n\nWebsite compiled at "' + os.path.abspath(distdir) + '"\n\n')
-
-
-
-
-
-
-
-
